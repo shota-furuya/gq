@@ -1,0 +1,80 @@
+﻿<html>
+<head>
+    <title>原爆イズ</title>
+    <style>
+        .square_btn {
+            display: inline-block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            background: #668ad8; /*ボタン色*/
+            color: #FFF;
+            border-bottom: solid 4px #627295;
+            border-radius: 3px;
+        }
+
+            .square_btn:active { /*ボタンを押したとき*/
+                -ms-transform: translateY(4px);
+                -webkit-transform: translateY(4px);
+                transform: translateY(4px); /*下に動く*/
+                box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); /*影を小さく*/
+                border-bottom: none;
+            }
+
+			.square_btn:hover {
+    background: #cc0000;
+}
+
+			.square_bto{
+    display: inline-block;
+    padding: 7px 20px;
+	border-radius: 25px;
+    text-decoration: none;
+    color: #FFF;
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    transition: .4s;
+}
+
+.square_bto:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+    </style>
+    <script type="text/javascript">
+        var x = 0;
+        function anser(num) {
+            x = x + 1;
+            if (x == 1) {
+                if (document.getElementById) {
+                    if (num == 0) {
+                        document.getElementById("answer").innerHTML = "<h2><font color='blue'>不正解</font></h2>";
+                        document.getElementById("button1").innerHTML = "<a href='#' class='square_bto' style='pointer-events: auto;' onclick='location.href = 'genbakuizu4.html'' id='button1'>次へ</a>";
+                    }
+                    else {
+                        document.getElementById("answer").innerHTML = "<h2><font color='red'>正解</font></h2>";
+                        document.getElementById("button1").innerHTML = "<a href='#' class='square_bto' style='pointer-events: auto;' onclick='location.href = 'genbakuizu4.html'' id='button1'>次へ</a>";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <center>
+	<font style="font-size: 30px;">
+        <h2>
+            <font size="7">問題１０</font><br />
+            質量が減ることを何というか？<br />
+            <br />
+            <a href="#" class="square_btn" onclick="anser(0)">【①質量減少】</a><br /><br />
+            <a href="#" class="square_btn" onclick="anser(0)">【②質感最高】</a><br /><br />
+            <a href="#" class="square_btn" onclick="anser(1)">【③質量欠損】</a><br /><br />
+			<a href="#" class="square_btn" onclick="anser(0)">【④給料決算】</a><br /><br />
+            解答<br /></h2>
+        <div id="answer"></div><br /><br /><br />
+        <a href="#" class="square_bto" style="pointer-events: none;" onclick="location.href = 'genbakuizu13.html'" id="button1" disabled>次へ</a><br />
+
+		</font>
+    </center>
+</body>
+</html>
