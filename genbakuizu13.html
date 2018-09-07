@@ -53,10 +53,13 @@
                     else {
                         document.getElementById("answer").innerHTML = "<h2><font color='red'>正解</font></h2>";
                         document.getElementById("button1").innerHTML = "<a href='#' class='square_bto' style='pointer-events: auto;' onclick='location.href = 'genbakuizu4.html'' id='button1'>次へ</a>";
+						localStorage.setItem("message","こんにちは");
+
                     }
                 }
             }
         }
+		
     </script>
 </head>
 <body>
@@ -73,7 +76,7 @@
 			<a href="#" class="square_btn" onclick="anser(0)">【⑤ソーリー・ボブ】</a><br /><br />
             解答<br /></h2>
         <div id="answer"></div><br /><br /><br />
-
+		<a href="#" class="square_bto" style="pointer-events: none;" onclick="location.href = 'genbakuizu14.html'" id="button1" disabled>次へ</a><br />
 		</font>
     </center>
 </body>
